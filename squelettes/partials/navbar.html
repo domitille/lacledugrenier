@@ -1,22 +1,24 @@
-<div class="navbar">
-	<div class="navbar-inner">
-		<div class="container">
-			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
-			</a>
-			<a class="col-sm-3 brand" href="#URL_SITE_SPIP">
-				#LOGO_SITE_SPIP
-			</a>
-			<div class="nav-collapse collapse pull-right">
-				<ul class="nav">
-					<BOUCLE_racine(RUBRIQUES){racine}>
-						<li[ (#EXPOSE{class="active"})]><a 
-							href="#URL_RUBRIQUE"[ title="(#TITRE|attribut_html|couper{80})"]>#TITRE</a></li>
-					</BOUCLE_racine>
-				</ul>
-			</div><!--/.nav-collapse -->
+			</button>
+			<a class="navbar-brand" href="#">La clé du grenier</a>
 		</div>
-	</div>
-</div>
+		<a class="col-sm-3 brand" href="#URL_SITE_SPIP" alt="Cliquez sur le lien pour revenir à la page d'accueil">
+			#LOGO_SITE_SPIP
+		</a>
+		<div class="navbar-collapse collapse pull-right">
+			<ul class="nav navbar-nav">
+				<BOUCLE_racine(RUBRIQUES){racine}>
+					<li[ (#EXPOSE{class="active"})]><a 
+						href="#URL_RUBRIQUE"[ title="(#TITRE|attribut_html|couper{80})"]>#TITRE</a></li>
+				</BOUCLE_racine>
+			</ul>
+		</div><!--/.navbar-collapse -->
+	</div><!--/.container-fluid-->
+</nav>
