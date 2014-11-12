@@ -11,3 +11,6 @@
 spip.png
 rien.gif
 !/squelettes
+!/squelettes/*/*
+/squelettes/*/.DS_Store
+/squelettes/*/._*
