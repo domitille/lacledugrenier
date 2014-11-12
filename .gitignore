@@ -1,0 +1,13 @@
+.DS_Store
+._*
+/*.txt
+/IMG/*
+/config/*
+/ecrire/*
+/local/*
+/plugins-dist/*
+/*/
+/*.php
+spip.png
+rien.gif
+!/squelettes
