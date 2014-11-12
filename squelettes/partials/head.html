@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>	   <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>		   <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>		   <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<BOUCLE_article(ARTICLES){id_article?}{id_rubrique?}>
+		<title>#NOM_SITE_SPIP[ - (#TITRE)]</title>
+		</BOUCLE_article>
+		</B_article>
+			<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+			<title>#NOM_SITE_SPIP[ - (#TITRE)]</title>
+			</BOUCLE_rubrique>
+		<//B_article>
+		
+		<meta name="description" content="#SLOGAN_SITE_SPIP">
+		<meta name="viewport" content="width=device-width">
+
+[		<link rel="stylesheet" href="(#CHEMIN{css/bootstrap.css}|compacte)">]
+[		<link rel="stylesheet" href="(#CHEMIN{css/lacle.css}|compacte)?1">]
+
+[		<script src="(#CHEMIN{js/bootstrap.js})"></script>]
+	</head>

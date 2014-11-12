@@ -1,0 +1,39 @@
+<BOUCLE_principale(RUBRIQUES){id_rubrique}>
+<INCLURE{fond=partials/head}{env}>
+	<body class="contact">
+		<INCLURE{fond=partials/chromeframe}>
+
+		<div class="main container">
+			<div class="wrap">
+
+				<INCLURE{fond=partials/navbar}{env}>
+
+				<div class="row">
+					<BOUCLE_contact(ARTICLES){id_rubrique}{!par date}{0,1}>
+					<div class="span8" id="slideshow">
+						<BOUCLE_slideshow(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif} {par num titre, date}>
+							<img [ title="(#TITRE|attribut_html|couper{80})"]
+							[ src="(#FICHIER|image_reduire{700,0}|inserer_attribut{class,spip_logos}|extraire_attribut{src})">]
+						</BOUCLE_slideshow>
+					</div>
+					<div class="span4">
+						<h2>#TITRE</h2>
+						<div class="texte">
+							#TEXTE
+						</div>
+						
+					</div>
+					</BOUCLE_contact>
+				</div>
+			<hr>
+
+			<INCLURE{fond=partials/footer}>
+
+			</div> <!-- /wrap -->
+		</div> <!-- /container -->
+
+		<INCLURE{fond=partials/scripts}>
+		<INCLURE{fond=partials/stats}>
+	</body>
+</html>
+</BOUCLE_principale>

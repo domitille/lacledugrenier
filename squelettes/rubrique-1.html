@@ -1,0 +1,48 @@
+<BOUCLE_principale(RUBRIQUES){id_rubrique}>
+<INCLURE{fond=partials/head}{env}>
+	<body class="accueil">
+		<INCLURE{fond=partials/chromeframe}>
+
+		<div class="main container">
+			<div class="wrap">
+
+				<INCLURE{fond=partials/navbar}{env}>
+
+				<div class="row">
+					<BOUCLE_accueil(ARTICLES){id_rubrique}{!par date}{0,1}>
+					<div class="span5" id="slideshow">
+						<BOUCLE_slideshow(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif} {par num titre}{!par date}>
+							<img [ title="(#TITRE|attribut_html|couper{80})"]
+							[ src="(#FICHIER|image_reduire{500,0}|inserer_attribut{class,spip_logos}|extraire_attribut{src})">]
+						</BOUCLE_slideshow>
+					</div>
+					<div class="span7">
+						<h2>#TITRE</h2>
+						<div class="texte">
+							#TEXTE
+						</div>
+						
+						<hr>
+						<div class="article">
+							<BOUCLE_latest(ARTICLES){id_rubrique=3}{!par date}{0,1}>
+							<h2>#TITRE</h2>
+							[<div class="info"><strong>(#DATE|affdate)</strong></div>]
+							<div class="texte">#TEXTE</div>
+							</BOUCLE_latest>
+
+						</div>
+					</div>
+					</BOUCLE_accueil>
+				</div>
+			<hr>
+
+			<INCLURE{fond=partials/footer}>
+
+			</div> <!-- /wrap -->
+		</div> <!-- /container -->
+
+		<INCLURE{fond=partials/scripts}>
+		<INCLURE{fond=partials/stats}>
+	</body>
+</html>
+</BOUCLE_principale>

@@ -1,0 +1,22 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="span3 brand" href="#URL_SITE_SPIP">
+				#LOGO_SITE_SPIP
+			</a>
+			<div class="nav-collapse collapse pull-right">
+				<ul class="nav">
+					<BOUCLE_racine(RUBRIQUES){racine}>
+						<li[ (#EXPOSE{class="active"})]><a 
+							href="#URL_RUBRIQUE"[ title="(#TITRE|attribut_html|couper{80})"]>#TITRE</a></li>
+					</BOUCLE_racine>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+</div>

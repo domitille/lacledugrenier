@@ -1,0 +1,14 @@
+<BOUCLE_article(ARTICLES){id_article}>
+<li class="span2">
+	<a[ href="(#LOGO_ARTICLE|image_reduire{600}|extraire_attribut{src})"]><img [ alt="(#TITRE|attribut_html|couper{80})"]
+	[ src="(#LOGO_ARTICLE|image_reduire{300,0}|extraire_attribut{src})"]
+	[ data-large="(#LOGO_ARTICLE|image_reduire{1200,0}|extraire_attribut{src})"]></a>
+</li>
+</BOUCLE_article>
+<BOUCLE_thumbs(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif} {par num titre, date}>
+<li class="span2">
+	<a[ href="(#FICHIER|image_reduire{600}|extraire_attribut{src})"]><img [ alt="(#TITRE|attribut_html|couper{80})"]
+	[ src="(#FICHIER|image_reduire{300,0}|extraire_attribut{src})"
+	[ data-large="(#FICHIER|image_reduire{1200,0}|extraire_attribut{src})"]>]</a>
+</li>
+</BOUCLE_thumbs>

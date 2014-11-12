@@ -1,0 +1,37 @@
+<BOUCLE_principale(RUBRIQUES){id_rubrique}>
+<INCLURE{fond=partials/head}{env}>
+	<body class="blog">
+		<INCLURE{fond=partials/chromeframe}>
+
+		<div class="main container">
+			<div class="wrap">
+				
+				<INCLURE{fond=partials/navbar}{env}>
+
+				<B_blog>
+				#ANCRE_PAGINATION
+				<BOUCLE_blog(ARTICLES){id_rubrique}{!par date}{pagination}>
+				<div class="row article">
+[					<div class="span2 info">(#DATE|affdate)</div>]
+					<div class="span8">
+						<h2>#TITRE</h2>
+[						<div class="texte">
+							(#TEXTE|image_reduire{800})
+						</div>]
+					</div>
+				</div>
+				</BOUCLE_blog>
+				[<p class="pagination">(#PAGINATION|{precedent_suivant})</p>]
+				</B_blog>
+			<hr>
+
+			<INCLURE{fond=partials/footer}>
+
+			</div> <!-- /wrap -->
+		</div> <!-- /container -->
+
+		<INCLURE{fond=partials/scripts}>
+		<INCLURE{fond=partials/stats}>
+	</body>
+</html>
+</BOUCLE_principale>

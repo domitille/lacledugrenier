@@ -1,0 +1,36 @@
+<BOUCLE_principale(RUBRIQUES){id_rubrique}>
+<INCLURE{fond=partials/head}{env}>
+	<body class="collection">
+		<INCLURE{fond=partials/chromeframe}>
+
+		<div class="main container">
+			<div class="wrap">
+				
+				<INCLURE{fond=partials/navbar}{env}>
+				
+				<BOUCLE_collections(RUBRIQUES){id_parent}{!par num titre}>
+				<div class="row big">
+					<div class="span3 deg"><h2><span>#TITRE</span></h2></div>
+					<INCLURE{fond=partials/list, id_rubrique}>
+				</div>
+				</BOUCLE_collections>
+				</B_collections>
+				[(#REM) on est sur une page de collection, page pour le référencement]
+				<div class="row big">
+					<div class="span3 deg"><h2><span>#TITRE</span></h2></div>
+					<INCLURE{fond=partials/list, id_rubrique}>
+				</div>
+				<//B_collections>
+
+			<hr>
+
+			<INCLURE{fond=partials/footer}>
+
+			</div> <!-- /wrap -->
+		</div> <!-- /container -->
+
+		<INCLURE{fond=partials/scripts}>
+		<INCLURE{fond=partials/stats}>
+	</body>
+</html>
+</BOUCLE_principale>
