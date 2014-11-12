@@ -1,12 +1,12 @@
 <BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
 <BOUCLE_produits(ARTICLES){id_rubrique}{!par num titre}>
 	<BOUCLE_article_mot(ARTICLES){id_article}{id_mot=1}>
-<div class="span6">
+<div class="col-sm-6">
 	[<a[ title="(#TITRE|attribut_html)"] href="#URL_ARTICLE">(#LOGO_ARTICLE|image_passe_partout{800,575}|image_recadre{800,575}|inserer_attribut{alt,#TITRE|attribut_html})</a>]
 </div>
 	</BOUCLE_article_mot>
 	</B_article_mot>
-<div class="span3">
+<div class="col-sm-3">
 	[<a[ title="(#TITRE|attribut_html)"] href="#URL_ARTICLE">(#LOGO_ARTICLE|image_reduire{400,0}|image_recadre{400,600}|inserer_attribut{alt,#TITRE|attribut_html})</a>]
 </div>
 	<//B_article_mot>

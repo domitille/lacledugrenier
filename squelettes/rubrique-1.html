@@ -10,13 +10,13 @@
 
 				<div class="row">
 					<BOUCLE_accueil(ARTICLES){id_rubrique}{!par date}{0,1}>
-					<div class="span5" id="slideshow">
+					<div class="col-sm-5" id="slideshow">
 						<BOUCLE_slideshow(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif} {par num titre}{!par date}>
 							<img [ title="(#TITRE|attribut_html|couper{80})"]
 							[ src="(#FICHIER|image_reduire{500,0}|inserer_attribut{class,spip_logos}|extraire_attribut{src})">]
 						</BOUCLE_slideshow>
 					</div>
-					<div class="span7">
+					<div class="col-sm-7">
 						<h2>#TITRE</h2>
 						<div class="texte">
 							#TEXTE

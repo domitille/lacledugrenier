@@ -10,14 +10,14 @@
 				
 				<BOUCLE_collections(RUBRIQUES){id_parent}{!par num titre}>
 				<div class="row big">
-					<div class="span3 deg"><h2><span>#TITRE</span></h2></div>
+					<div class="col-sm-3 deg"><h2><span>#TITRE</span></h2></div>
 					<INCLURE{fond=partials/list, id_rubrique}>
 				</div>
 				</BOUCLE_collections>
 				</B_collections>
 				[(#REM) on est sur une page de collection, page pour le référencement]
 				<div class="row big">
-					<div class="span3 deg"><h2><span>#TITRE</span></h2></div>
+					<div class="col-sm-3 deg"><h2><span>#TITRE</span></h2></div>
 					<INCLURE{fond=partials/list, id_rubrique}>
 				</div>
 				<//B_collections>

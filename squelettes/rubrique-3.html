@@ -12,8 +12,8 @@
 				#ANCRE_PAGINATION
 				<BOUCLE_blog(ARTICLES){id_rubrique}{!par date}{pagination}>
 				<div class="row article">
-[					<div class="span2 info">(#DATE|affdate)</div>]
-					<div class="span8">
+[					<div class="col-sm-2 info">(#DATE|affdate)</div>]
+					<div class="col-sm-8">
 						<h2>#TITRE</h2>
 [						<div class="texte">
 							(#TEXTE|image_reduire{800})
