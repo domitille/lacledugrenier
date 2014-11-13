@@ -1,3 +1,14 @@
 body {
 	background-color: #eee;
 }
+
+body.accueil h2 {
+	color:red;
+}
+
+
+/* utils */
+#spip-admin.spip-admin-float {
+	bottom: 0;
+	top: inherit;
+}

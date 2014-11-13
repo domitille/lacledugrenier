@@ -9,31 +9,18 @@
 				<INCLURE{fond=partials/navbar}{env}>
 
 				<div class="row">
-					<BOUCLE_accueil(ARTICLES){id_rubrique}{!par date}{0,1}>
-					<div class="col-sm-5" id="slideshow">
-						<BOUCLE_slideshow(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif} {par num titre}{!par date}>
-							<img [ title="(#TITRE|attribut_html|couper{80})"]
-							[ src="(#FICHIER|image_reduire{500,0}|inserer_attribut{class,spip_logos}|extraire_attribut{src})">]
-						</BOUCLE_slideshow>
-					</div>
-					<div class="col-sm-7">
-						<h2>#TITRE</h2>
-						<div class="texte">
-							#TEXTE
-						</div>
-						
-						<hr>
-						<div class="article">
-							<BOUCLE_latest(ARTICLES){id_rubrique=3}{!par date}{0,1}>
-							<h2>#TITRE</h2>
-							[<div class="info"><strong>(#DATE|affdate)</strong></div>]
-							<div class="texte">#TEXTE</div>
-							</BOUCLE_latest>
+  					<div class="col-md-3">
+  						    <div class="thumbnail">
+      							<img data-src="holder.js/300x300" alt="">
+      							<div class="caption">
+        							<h3>Thumbnail label</h3>
+								</div>
+							</div>
+    					</div>
+  					</div>
 
-						</div>
-					</div>
-					</BOUCLE_accueil>
 				</div>
+
 			<hr>
 
 			<INCLURE{fond=partials/footer}>
