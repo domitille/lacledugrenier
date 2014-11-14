@@ -1,0 +1,54 @@
+<BOUCLE_principale(ARTICLES){id_article}>
+<INCLURE{fond=partials/head}{env}>
+	<body class="produits">
+		<INCLURE{fond=partials/chromeframe}>
+
+		<div class="main container">
+			<div class="wrap">
+
+				<INCLURE{fond=partials/navbar}{env}>
+
+				<div class="row">
+					[<div class="span6 magnify">
+						<div class="glass"></div><img id="large"
+						src="(#LOGO_ARTICLE
+						|inserer_attribut{id,large}
+						|image_reduire{600}
+						|extraire_attribut{src})"
+						alt="#TITRE"
+						[ data-large="(#LOGO_ARTICLE|image_reduire{1200,0}|extraire_attribut{src})"]
+						class="small">
+					</div>]
+					<div class="span6">
+						<div class="article">
+							<h2>#TITRE</h2>
+							<div class="texte">
+								#TEXTE
+							</div>
+[							<div class="prix">Prix: (#PS*) &euro;</div>]
+						</div>
+						
+						<ul class="thumbnails pull-down" id="miniatures">
+							
+							<BOUCLE_compteur(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif}>
+							[(#SET{nombre,[(#TOTAL_BOUCLE|plus{1})]})]
+							[<!--(#GET{nombre}|<={3})--> [(#INCLURE{fond=partials/thumbnails_3,env})]]
+							[<!--(#GET{nombre}|>{3})--> [(#INCLURE{fond=partials/thumbnails_4,env})]]
+							</BOUCLE_compteur>
+
+						</ul>
+					</div>
+				</div>
+			<hr>
+
+
+			<INCLURE{fond=partials/footer}>
+
+			</div> <!-- /wrap -->
+		</div> <!-- /container -->
+
+		<INCLURE{fond=partials/scripts}>
+		<INCLURE{fond=partials/stats}>
+	</body>
+</html>
+</BOUCLE_principale>
