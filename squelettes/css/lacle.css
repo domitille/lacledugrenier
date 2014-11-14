@@ -2,8 +2,27 @@ body {
 	background-color: #eee;
 }
 
-body.accueil h2 {
-	color:red;
+.row img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+a {
+	color: purple;
+}
+
+h2 {
+	font-size: 12px;
+}
+
+body.accueil .nouveautes h2 {
+	color: orange;
+	font-weight: lighter;
+}
+
+body.accueil .actualites h2 {
+	color: pink;
 }
 
 
