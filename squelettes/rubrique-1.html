@@ -13,8 +13,8 @@
 						#DESCRIPTIF_SITE_SPIP
 					</div>
 				</div>
-
-				<div class="row">
+				<!-- nouveautes : les derniers produits -->
+				<div class="row nouveautes">
 					<BOUCLE_nouveautes(ARTICLES){id_rubrique=2}{0,4}{par date}{inverse}>
 						<div class="col-md-3">
 							<div class="thumbnail">
@@ -30,6 +30,24 @@
 							</div>
 						</div>
 					</BOUCLE_nouveautes>
+				</div>
+
+				<!-- actualites : les dernieres news -->
+				<div class="row actualites">
+					<div class="col-md-4">
+						#LOGO_RUBRIQUE
+					</div>
+					<div class="col-md-8">
+						<BOUCLE_actualites(ARTICLES){id_rubrique}{0,2}{par date}{inverse}>
+							<article>
+								<header>
+									<h2>#TITRE</h2>
+									[<p class="date">(#DATE|affdate_court)</p>]
+								</header>
+								#TEXTE
+							</article>
+						</BOUCLE_actualites>
+					</div>
 				</div>
 
 			<hr>
