@@ -7,20 +7,15 @@
 			<div class="wrap">
 
 				<INCLURE{fond=partials/navbar}{env}>
-
-				<div class="row">
-					<div class="col-md-12">
-						#DESCRIPTIF_SITE_SPIP
-					</div>
-				</div>
+				
 				<!-- nouveautes : les derniers produits -->
 				<div class="row nouveautes">
 					<BOUCLE_nouveautes(ARTICLES){id_rubrique=2}{0,4}{par date}{inverse}>
 						<div class="col-md-3">
 							<div class="thumbnail">
 								[<a href="#URL_ARTICLE">(#LOGO_ARTICLE|
-									|image_passe_partout{200,200}
-									|image_recadre{200,200, 'top center'}
+									|image_passe_partout{300,300}
+									|image_recadre{300,300, 'top center'}
 									|image_reduire{400,400}
 									|image_aplatir{jpg,ffffff}
 									|inserer_attribut{class,spip_logos})</a>]
@@ -36,15 +31,17 @@
 
 				<!-- actualites : les dernieres news -->
 				<div class="row actualites">
-					<div class="col-md-4">
-						#LOGO_RUBRIQUE
+					<div class="col-md-9">
+						<div class="thumbnail">
+							#LOGO_RUBRIQUE
+						</div>
 					</div>
-					<div class="col-md-8">
+					<div class="col-md-3">
 						<BOUCLE_actualites(ARTICLES){id_rubrique}{0,2}{par date}{inverse}>
 							<article>
 								<header>
 									<h2>#TITRE</h2>
-									[<p class="date">(#DATE|affdate_court)</p>]
+									[<p class="date grey">(#DATE|affdate_court)</p>]
 								</header>
 								#TEXTE
 							</article>
