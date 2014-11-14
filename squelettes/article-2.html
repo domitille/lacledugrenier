@@ -9,16 +9,15 @@
 				<INCLURE{fond=partials/navbar}{env}>
 
 				<div class="row">
-					[<div class="col-md-6 magnify">
-						<div class="glass"></div><img id="large"
-						src="(#LOGO_ARTICLE
-						|inserer_attribut{id,large}
-						|image_reduire{600}
-						|extraire_attribut{src})"
-						alt="#TITRE"
-						[ data-large="(#LOGO_ARTICLE|image_reduire{1200,0}|extraire_attribut{src})"]
-						class="small">
-					</div>]
+					<div class="col-md-6 magnify">
+						<div class="glass"></div>
+						<BOUCLE_thumbs(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif} {par	 num titre, date} {0,1}>
+							<img id="large"
+								[src="(#FICHIER|image_reduire{600}|extraire_attribut{src})"]
+								[alt="(#TITRE|attribut_html)"]
+								[data-large="(#FICHIER|image_reduire{1200,0}|extraire_attribut{src})"]>
+						</BOUCLE_thumbs>
+					</div>
 					<div class="col-md-6">
 						<div class="article">
 							<h2>#TITRE</h2>
