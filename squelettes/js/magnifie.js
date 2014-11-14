@@ -3,7 +3,7 @@ var magnifie = function(smallsrc,largesrc){
 	var small = {image:null,width:0,height:0,loaded:false},
 		large = {image:null,width:0,height:0,loaded:false},
 		magnify = {offset:null};
-	
+
 	var load = function(){
 //		reset
 		$('.glass').hide().css({
@@ -31,7 +31,6 @@ var magnifie = function(smallsrc,largesrc){
 			large.loaded = true;
 			init();
 		});
-		
 		init(); // try an dry run by the way (performance tweak)
 	};
 	
