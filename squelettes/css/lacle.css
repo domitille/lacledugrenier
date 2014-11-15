@@ -43,16 +43,16 @@ a:hover, a:focus {
 
 .navbar .navbar-nav li {
 	border-left: 1px solid #1a1d24;
+	font-size: 18px;
+	font-family: toxica, courier, monospace;
 }
 
 .navbar .navbar-nav li.active a{
 	color: #000;
 }
 .navbar .navbar-nav li a {
-	font-size: 18px;
 	color: #666; /* #a6a69f;*/
 	text-decoration: none;
-	font-family: toxica, courier, monospace;
 }
 
 .navbar p {
