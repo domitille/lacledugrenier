@@ -18,14 +18,13 @@ body {
 	color: #1a1d24;
 }
 
-.row img {
-	max-width: 100%;
-	height: auto;
-}
-
 a {
 	color: #666;
 	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
 }
 
 a:hover, a:focus {
@@ -36,6 +35,9 @@ a:hover, a:focus {
 .grey {
 	color: #999;
 }
+
+/* navbar
+*/
 
 .navbar .navbar-nav {
 	margin-top: 30px;
@@ -61,6 +63,13 @@ a:hover, a:focus {
 	font-size: 18px;
 }
 
+/* home
+*/
+
+body.accueil .row img {
+	max-width: 100%;
+	height: auto;
+}
 
 body.accueil .nouveautes h2 {
 	font-size: 18px;
@@ -74,18 +83,8 @@ body.accueil .actualites .date {
 	margin-top: 0;
 }
 
-
-/* utils */
-#spip-admin.spip-admin-float {
-	bottom: 0;
-	top: inherit;
-}
-
-
-
-// PRODUCT
-// -------
-
+/* products
+*/
 
 .magnify {
 	position:relative;
@@ -115,4 +114,16 @@ body.accueil .actualites .date {
 	box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 
 		0 0 7px 7px rgba(0, 0, 0, 0.25), 
 		inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+}
+
+body.produits .thumbnails li {
+	list-style: outside none none;
+}
+
+/* utils
+*/
+
+#spip-admin.spip-admin-float {
+	bottom: 0;
+	top: inherit;
 }
