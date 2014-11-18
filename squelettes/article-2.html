@@ -28,7 +28,7 @@
 [							<div class="prix">Prix : (#PS*) &euro;</div>]
 						</div>
 						
-						<ul class="thumbnails pull-down" id="miniatures">
+						<div class="row thumbnails pull-down" id="miniatures">
 							
 							<BOUCLE_compteur(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif}>
 							[(#SET{nombre,[(#TOTAL_BOUCLE|plus{1})]})]
@@ -36,7 +36,7 @@
 							[<!--(#GET{nombre}|>{3})--> [(#INCLURE{fond=partials/thumbnails_4,env})]]
 							</BOUCLE_compteur>
 
-						</ul>
+						</div>
 					</div>
 				</div>
 			<hr>
