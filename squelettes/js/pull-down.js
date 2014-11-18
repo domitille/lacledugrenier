@@ -1,6 +1,5 @@
 // 
 //  pull-down.js
-//  laborantine
 //  
 //  Created by gaspard on 2013-05-13.
 // 
@@ -20,8 +19,8 @@ var pulldown = function() {
 			// add some margin
 			var margin = maxheight - (curheight + height)+10;
 			$(this).css({'margin-top':margin}).show();
-			if(margin <10)
-				$(this).css({'margin-top':10});
+			if(margin <20)
+				$(this).css({'margin-top':20});
 		} //if
 		else{
 			$(this).css({'margin-top':'20px'}).show();
