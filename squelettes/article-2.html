@@ -18,14 +18,12 @@
 								[data-large="(#FICHIER|image_reduire{1200,0}|extraire_attribut{src})"]>
 						</BOUCLE_thumbs>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-4">
 						<div class="article">
 							<h2>#TITRE</h2>
 							<div class="texte">
 								#TEXTE
 							</div>
-[							<div class="details">(#CHAPO)</div>]
-[							<div class="prix">Prix : (#PS*) &euro;</div>]
 						</div>
 						
 						<div class="row thumbnails pull-down" id="miniatures">
@@ -37,6 +35,10 @@
 							</BOUCLE_compteur>
 
 						</div>
+					</div>
+					<div class="col-md-2 aside">
+[						<div class="details">(#CHAPO)</div>]
+[						<div class="prix">Prix : (#PS*) &euro;</div>]
 					</div>
 				</div>
 			<hr>
