@@ -9,7 +9,7 @@
 				<INCLURE{fond=partials/navbar}{env}>
 
 				<div class="row">
-					<div class="col-md-6 magnify">
+					<div class="col-md-5 magnify">
 						<div class="glass"></div>
 						<BOUCLE_thumbs(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif} {par	 num titre, date} {0,1}>
 							<img id="large"
@@ -36,9 +36,11 @@
 
 						</div>
 					</div>
-					<div class="col-md-2 aside">
-[						<div class="details">(#CHAPO)</div>]
-[						<div class="prix">Prix : (#PS*) &euro;</div>]
+					<div class="col-md-3">
+						<div class="aside">
+[							<div class="details">(#CHAPO)</div>]
+[							<div class="prix">Prix : (#PS*) &euro;</div>]
+						</div>
 					</div>
 				</div>
 			<hr>
