@@ -123,6 +123,18 @@ body.produits .aside{
 	border-left: .5em solid purple;
 }
 
+body.produits #miniatures.thumbnails {
+	list-style: outside none none;
+    margin-left: -20px;
+    padding:0;
+}
+body.produits #miniatures.thumbnails > li {
+    float: left;
+    margin-bottom: 10px;
+    padding: 0;
+    margin-left: 10px;
+}
+
 /* utils
 */
 

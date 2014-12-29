@@ -1,14 +1,14 @@
 <BOUCLE_thumbs(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif} {par num titre, date}{0,1}>
-<div class="col-sm-4">
+<li class="col-sm-4">
 	<a[ href="(#FICHIER|image_reduire{600}|extraire_attribut{src})"]><img [ alt="(#TITRE|attribut_html|couper{80})"]
 	[ src="(#FICHIER|image_reduire{300,0}|extraire_attribut{src})"
 	[ data-large="(#FICHIER|image_reduire{1200,0}|extraire_attribut{src})"]>]</a>
-</div>
+</li>
 </BOUCLE_thumbs>
 <BOUCLE_thumbs_mini(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif} {par num titre, date}{1,6}>
-<div class="col-sm-3">
+<li class="col-sm-3">
 	<a[ href="(#FICHIER|image_reduire{600}|extraire_attribut{src})"]><img [ alt="(#TITRE|attribut_html|couper{80})"]
 	[ src="(#FICHIER|image_reduire{300,0}|extraire_attribut{src})"
 	[ data-large="(#FICHIER|image_reduire{1200,0}|extraire_attribut{src})"]>]</a>
-</div>
+</li>
 </BOUCLE_thumbs_mini>
